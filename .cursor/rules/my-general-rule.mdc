@@ -1,0 +1,40 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Your rule content
+
+# Cursor Rules
+
+## Fundamental Principles
+- Write clean, simple, and readable code.
+- Implement features in the simplest possible way.
+- Keep files small and focused (<200 lines of code).
+- Test after every meaningful change.
+- Focus on core functionality before optimization.
+- Use clear and concise naming.
+- Think thoroughly before coding—write 2 to 3 reasoning paragraphs before implementation.
+- ALWAYS write simple, clean, and modular code.
+- Use clear and easy-to-understand language, writing in short sentences.
+- Always check for existing functions or utilities before writing new code. Reuse existing implementations whenever possible.
+
+## Error Fixing
+- DO NOT jump to conclusions; consider multiple possible cases before deciding.
+- Explain the problem in plain English.
+- Make only the minimal necessary changes, modifying as few lines as possible.
+- In case of strange errors, prompt the user to perform a Perplexity web search to get the latest information.
+- If unsure about a solution, recommend a Perplexity search instead of guessing.
+- Do and implement proper checks so i don't get eslint issues like variables being unused e.t.c , you can console the variable to prevent such errors for example.
+
+## Build Process
+- Verify that each new feature works by instructing the user to test it.
+- DO NOT write complicated and confusing code; always opt for a simple and modular approach.
+- When uncertain about implementation, suggest a Perplexity web search.
+
+## Comments
+- Always add helpful and explanatory comments in the code.
+- NEVER delete old comments unless they are obviously wrong or obsolete.
+- Include thorough explanatory comments in the code—ALWAYS write well-documented code.
+
