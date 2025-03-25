@@ -4,8 +4,10 @@ import { motion } from 'framer-motion';
 import { Button } from '../ui/Button';
 import { TypewriterText } from '../ui/TypewriterText';
 import { FloatingShapes } from '../ui/FloatingShapes';
+import { useRouter } from 'next/navigation';
 
 export function Hero() {
+  const router = useRouter();
   const texts = [
     "Create secure payment links in seconds",
     "Track transactions in real-time",
@@ -75,6 +77,7 @@ export function Hero() {
             <Button 
               size="lg" 
               className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-500/20"
+              onClick={() => router.push('/login')}
             >
               Get Started
             </Button>
@@ -82,6 +85,7 @@ export function Hero() {
               variant="outline" 
               size="lg" 
               className="w-full sm:w-auto border-blue-400 text-blue-400 hover:bg-blue-400/10"
+              onClick={() => router.push('/features')}
             >
               Learn More
             </Button>

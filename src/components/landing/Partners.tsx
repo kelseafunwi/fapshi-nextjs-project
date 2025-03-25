@@ -48,7 +48,7 @@ export function Partners() {
     <section className="py-20 bg-gradient-to-b from-blue-900 to-blue-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-blue-400">
+          <h2 className="text-3xl font-bold sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-blue-400">
             Our Trusted Partners
           </h2>
           <p className="mt-4 text-lg text-blue-200">
