@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import {supabase} from "@/utils/supabase";
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -15,16 +16,26 @@ const Login = () => {
         setLoading(true);
 
         try {
-            // Simulate API request (Replace with actual API call)
-            await new Promise((resolve) => setTimeout(resolve, 2000));
-            alert("Login successful");
-            router.push("/dashboard");
+            const { data, error } = await supabase.auth.signInWithPassword({
+                email: email,
+                password: password,
+            });
+
+            if (error) {
+                console.error("Supabase sign-in error:", error);
+                alert(`Login failed: ${error.message}`);
+            } else {
+                alert("Login successful!");
+                router.push("/jobs");
+            }
         } catch (error) {
-            alert("Login failed. Please try again.");
+            console.error("Error during sign-in:", error);
+            alert("An unexpected error occurred. Please try again.");
         } finally {
             setLoading(false);
         }
     };
+
 
     return (
         <div className="flex min-h-screen items-center justify-center bg-gray-100">
