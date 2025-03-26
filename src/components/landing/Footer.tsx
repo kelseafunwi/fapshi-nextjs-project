@@ -1,97 +1,45 @@
-"use client"
-
-import Link from 'next/link';
-import Image from 'next/image';
-
-const footerLinks = {
-  Documentation: [
-    { name: 'Create an account', href: '#' },
-    { name: 'Integrate Payments', href: '#' },
-    { name: 'Make Bulk Payments', href: '#' },
-    { name: 'How to Payout', href: '#' },
-    { name: 'Create Payment Links', href: '#' },
-  ],
-  Features: [
-    { name: 'Payment Aggregator', href: '#' },
-    { name: 'Payment Links', href: '#' },
-    { name: 'Payouts', href: '#' },
-    { name: 'Invoicing', href: '#' },
-    { name: 'Products', href: '#' },
-  ],
-  Resources: [
-    { name: 'API Docs', href: '#' },
-    { name: 'Guides', href: '#' },
-    { name: 'Pricing', href: '#' },
-    { name: 'Privacy Policy', href: '#' },
-    { name: 'Terms & Conditions', href: '#' },
-  ],
-  Help: [
-    { name: 'FAQs', href: '#' },
-    { name: 'Help & Support', href: '#' },
-    { name: 'Contact us', href: '#' },
-  ],
-};
+'use client';
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-blue-950 to-black relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full filter blur-3xl" />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="py-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
-              <h3 className="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-blue-400 mb-4">
-                {category}
-              </h3>
-              <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-blue-200 hover:text-white transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <div className="border-t border-blue-800/50 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-4">
-              <Link href="/" className="relative h-8 w-32">
-                <Image
-                  src="/logo.png"
-                  alt="Logo"
-                  fill
-                  className="object-contain"
-                />
-              </Link>
-              <div className="text-blue-200">
-                <p>Central Market Road,</p>
-                <p>Buea - South West Region</p>
-                <p>Cameroon</p>
-              </div>
-            </div>
-            
-            <div className="flex flex-col items-end">
-              <a href="mailto:hello@fapshi.com" className="text-blue-200 hover:text-white transition-colors">
-                hello@fapshi.com
-              </a>
-              <a href="tel:+237673669111" className="text-blue-200 hover:text-white transition-colors">
-                +237 673 669 111
-              </a>
-              <p className="text-blue-400 mt-2">©2024 Fapshi Inc.</p>
-            </div>
+    <footer className="bg-gray-900 text-white py-12 px-4 md:px-8">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 className="font-bold mb-4">About Us</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:text-cameroon-sun">Company</a></li>
+              <li><a href="#" className="hover:text-cameroon-sun">Careers</a></li>
+              <li><a href="#" className="hover:text-cameroon-sun">Press</a></li>
+            </ul>
           </div>
+          <div>
+            <h3 className="font-bold mb-4">Support</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:text-cameroon-sun">Help Center</a></li>
+              <li><a href="#" className="hover:text-cameroon-sun">Contact Us</a></li>
+              <li><a href="#" className="hover:text-cameroon-sun">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-bold mb-4">Legal</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:text-cameroon-sun">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-cameroon-sun">Terms of Service</a></li>
+              <li><a href="#" className="hover:text-cameroon-sun">Cookie Policy</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-bold mb-4">Connect</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:text-cameroon-sun">Twitter</a></li>
+              <li><a href="#" className="hover:text-cameroon-sun">LinkedIn</a></li>
+              <li><a href="#" className="hover:text-cameroon-sun">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-8 pt-8 border-t border-gray-800 text-center">
+          <p>&copy; {new Date().getFullYear()} Fapshi. All rights reserved.</p>
         </div>
       </div>
     </footer>

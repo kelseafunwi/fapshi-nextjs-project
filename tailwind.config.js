@@ -9,8 +9,17 @@ const config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'cameroon': {
+          'earth': '#8B4513',
+          'forest': '#2F4F4F',
+          'sun': '#FFD700',
+          'accent': '#DC143C',
+        }
+      },
       animation: {
         'gradient': 'gradient 8s linear infinite',
+        'float': 'float 6s ease-in-out infinite',
       },
       keyframes: {
         gradient: {
@@ -23,6 +32,14 @@ const config = {
             'background-position': 'right center',
           },
         },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        }
+      },
+      fontFamily: {
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'display': ['Poppins', 'system-ui', 'sans-serif'],
       },
     },
   },
