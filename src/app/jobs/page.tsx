@@ -29,7 +29,7 @@ const JobsPage = () => {
                 <h1 className="text-3xl font-bold text-gray-800 mb-6 text-center">
                     Explore Exciting Opportunities
                 </h1>
-                <div className="mb-8">
+                <div className="mb-8 flex items-center">
                     <input
                         type="text"
                         placeholder="Search jobs..."
@@ -55,22 +55,25 @@ const JobsPage = () => {
                                     whileHover={{ scale: 1.03 }}
                                 >
                                     <div className="p-4">
-                                        <h2 className="text-xl font-semibold text-green-700 mb-2">
-                                            {job.title}
-                                        </h2>
+                                        <div className="flex justify-between items-start mb-2">
+                                            <h2 className="text-xl font-semibold text-gray-800">
+                                                {job.title}
+                                            </h2>
+                                            {/* Add a Bookmark Icon Here if you want to add it*/}
+                                        </div>
                                         <p className="text-gray-600 mb-3 line-clamp-3">
                                             {job.description}
                                         </p>
-                                        <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">
-                        Budget:{" "}
-                          <span className="font-semibold text-green-600">
-                          ${job.budget}
+                                        <div className="flex items-center justify-between mt-4">
+                                            <div>
+                                                <span className="text-sm text-gray-500">Budget:</span>
+                                                <span className="ml-1 font-semibold text-green-600">
+                          ${job.budget}/hr
                         </span>
-                      </span>
+                                            </div>
                                             <button
                                                 onClick={() => console.log("Apply button clicked")}
-                                                className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                                className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-colors duration-200"
                                             >
                                                 Apply Now
                                             </button>
