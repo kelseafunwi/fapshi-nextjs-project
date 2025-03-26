@@ -11,10 +11,19 @@ const config = {
     extend: {
       colors: {
         'cameroon': {
-          'earth': '#8B4513',
-          'forest': '#2F4F4F',
-          'sun': '#FFD700',
-          'accent': '#DC143C',
+          'primary': '#2C5282', // Deep blue
+          'secondary': '#F6AD55', // Warm orange
+          'accent': '#48BB78', // Forest green
+          'dark': '#1A365D', // Dark blue
+          'light': '#F7FAFC', // Light gray
+          'success': '#48BB78', // Green
+          'warning': '#ECC94B', // Yellow
+          'error': '#F56565', // Red
+          'text': {
+            'primary': '#2D3748',
+            'secondary': '#4A5568',
+            'light': '#A0AEC0'
+          }
         }
       },
       animation: {
