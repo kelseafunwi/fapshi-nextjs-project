@@ -13,7 +13,7 @@ export interface User {
   role: UserRole;
   profile_picture?: string;
   bio?: string;
-  skills?: string[];
+  skills?: string;
   created_at: string;
   verified: boolean;
 }

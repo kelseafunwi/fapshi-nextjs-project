@@ -3,19 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {supabase} from "@/utils/supabase";
-
-interface Job {
-    id: string;
-    client_id: string;
-    title: string;
-    description: string;
-    budget: number;
-    category?: string;
-    tags?: string[];
-    status: string;
-    created_at: string;
-    deadline?: string;
-}
+import {Job} from "@/utils/types";
 
 const JobsPage = () => {
     const [jobs, setJobs] = useState<Job[]>([]);
