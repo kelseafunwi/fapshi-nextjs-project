@@ -33,6 +33,7 @@ interface FapshiPaymentResponse {
   
 
 
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
@@ -65,8 +66,8 @@ interface FapshiPaymentResponse {
   };
 
   return (
-    <div className="p-4 max-w-md mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Fapshi Payment</h1>
+    <div className="max-w-md p-4 mx-auto">
+      <h1 className="mb-4 text-2xl font-bold">Fapshi Payment</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block mb-1">Amount (XAF):</label>
@@ -82,7 +83,7 @@ interface FapshiPaymentResponse {
         <button 
           type="submit" 
           disabled={loading}
-          className="w-full bg-blue-500 text-white p-2 rounded disabled:bg-blue-300"
+          className="w-full p-2 text-white bg-blue-500 rounded disabled:bg-blue-300"
         >
           {loading ? 'Processing...' : 'Pay'}
         </button>

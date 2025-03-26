@@ -40,11 +40,11 @@ export default function Login() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-blue-950 via-blue-900 to-blue-950 relative overflow-hidden">
+    <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-red-950 via-red-900 to-red-950">
       {/* Decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl opacity-10 animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600 rounded-full filter blur-3xl opacity-10 animate-pulse" />
+        <div className="absolute bg-red-400 rounded-full top-1/4 left-1/4 w-96 h-96 filter blur-3xl opacity-10 animate-pulse" />
+        <div className="absolute bg-red-600 rounded-full bottom-1/4 right-1/4 w-96 h-96 filter blur-3xl opacity-10 animate-pulse" />
       </div>
 
       <Navbar />
@@ -55,12 +55,12 @@ export default function Login() {
           animate={{ opacity: 1, y: 0 }}
           className="w-full max-w-md"
         >
-          <div className="text-center mb-8">
+          <div className="mb-8 text-center">
             <motion.h2
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-blue-400"
+              className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-200 to-red-400"
             >
               Welcome back
             </motion.h2>
@@ -68,7 +68,7 @@ export default function Login() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="mt-2 text-blue-200"
+              className="mt-2 text-red-200"
             >
               Sign in to your account to continue
             </motion.p>
@@ -78,11 +78,11 @@ export default function Login() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="bg-blue-900/30 backdrop-blur-xl rounded-2xl p-8 border border-blue-500/20 shadow-xl"
+            className="p-8 border shadow-xl bg-red-900/30 backdrop-blur-xl rounded-2xl border-red-500/20"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-blue-200">
+                <label htmlFor="email" className="block text-sm font-medium text-red-200">
                   Email address
                 </label>
                 <div className="mt-1">
@@ -94,13 +94,13 @@ export default function Login() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="appearance-none block w-full px-3 py-2 border border-blue-500/20 rounded-lg shadow-sm placeholder-blue-400/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-blue-900/50 text-white"
+                    className="block w-full px-3 py-2 text-white border rounded-lg shadow-sm appearance-none border-red-500/20 placeholder-red-400/50 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent bg-red-900/50"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="password" className="block text-sm font-medium text-blue-200">
+                <label htmlFor="password" className="block text-sm font-medium text-red-200">
                   Password
                 </label>
                 <div className="mt-1">
@@ -112,7 +112,7 @@ export default function Login() {
                     required
                     value={formData.password}
                     onChange={handleChange}
-                    className="appearance-none block w-full px-3 py-2 border border-blue-500/20 rounded-lg shadow-sm placeholder-blue-400/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-blue-900/50 text-white"
+                    className="block w-full px-3 py-2 text-white border rounded-lg shadow-sm appearance-none border-red-500/20 placeholder-red-400/50 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent bg-red-900/50"
                   />
                 </div>
               </div>
@@ -123,15 +123,15 @@ export default function Login() {
                     id="remember-me"
                     name="remember-me"
                     type="checkbox"
-                    className="h-4 w-4 text-blue-500 focus:ring-blue-500 border-blue-500/20 rounded bg-blue-900/50"
+                    className="w-4 h-4 text-red-500 rounded focus:ring-red-500 border-red-500/20 bg-red-900/50"
                   />
-                  <label htmlFor="remember-me" className="ml-2 block text-sm text-blue-200">
+                  <label htmlFor="remember-me" className="block ml-2 text-sm text-red-200">
                     Remember me
                   </label>
                 </div>
 
                 <div className="text-sm">
-                  <Link href="/forgot-password" className="font-medium text-blue-400 hover:text-blue-300">
+                  <Link href="/forgot-password" className="font-medium text-red-400 hover:text-red-300">
                     Forgot your password?
                   </Link>
                 </div>
@@ -143,7 +143,7 @@ export default function Login() {
                   variant="primary"
                   size="lg"
                   isLoading={isLoading}
-                  className="w-full bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800"
+                  className="w-full bg-gradient-to-r from-red-500 to-red-700 hover:from-red-600 hover:to-red-800"
                 >
                   Sign in
                 </Button>
@@ -153,34 +153,34 @@ export default function Login() {
             <div className="mt-6">
               <div className="relative">
                 <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-blue-500/20"></div>
+                  <div className="w-full border-t border-red-500/20"></div>
                 </div>
                 <div className="relative flex justify-center text-sm">
-                  <span className="px-2 bg-blue-900/30 text-blue-200">Or continue with</span>
+                  <span className="px-2 text-red-200 bg-red-900/30">Or continue with</span>
                 </div>
               </div>
 
-              <div className="mt-6 grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-3 mt-6">
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full border-blue-500/20 text-blue-200 hover:bg-blue-500/10"
+                  className="w-full text-red-200 border-red-500/20 hover:bg-red-500/10"
                 >
                   Google
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full border-blue-500/20 text-blue-200 hover:bg-blue-500/10"
+                  className="w-full text-red-200 border-red-500/20 hover:bg-red-500/10"
                 >
                   GitHub
                 </Button>
               </div>
             </div>
 
-            <p className="mt-8 text-center text-sm text-blue-200">
+            <p className="mt-8 text-sm text-center text-red-200">
               Don&apos;t have an account?{' '}
-              <Link href="/signup" className="font-medium text-blue-400 hover:text-blue-300">
+              <Link href="/signup" className="font-medium text-red-400 hover:text-red-300">
                 Sign up
               </Link>
             </p>

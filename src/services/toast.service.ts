@@ -32,13 +32,13 @@ export class ToastService {
   show(message: string, type: ToastType = 'info') {
     const options = {
       duration: type === 'loading' ? Infinity : 5000,
-      className: 'bg-blue-950 text-white',
+      className: 'bg-red-950 text-white',
       style: {
         padding: '16px',
         borderRadius: '10px',
-        background: 'rgba(23, 37, 84, 0.95)',
+        background: 'rgba(127, 29, 29, 0.95)',
         backdropFilter: 'blur(10px)',
-        border: '1px solid rgba(59, 130, 246, 0.2)',
+        border: '1px solid rgba(239, 68, 68, 0.2)',
         color: '#fff',
       },
     };

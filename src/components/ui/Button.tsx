@@ -19,9 +19,9 @@ export function Button({
   const baseStyles = 'inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   
   const variants = {
-    primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
+    primary: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500',
     secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-gray-500',
-    outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
+    outline: 'border-2 border-red-600 text-red-600 hover:bg-red-50 focus:ring-red-500',
   };
 
   const sizes = {
@@ -42,7 +42,7 @@ export function Button({
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-          className="w-5 h-5 border-2 border-white border-t-transparent rounded-full mr-2"
+          className="w-5 h-5 mr-2 border-2 border-white rounded-full border-t-transparent"
         />
       ) : null}
       {children}
